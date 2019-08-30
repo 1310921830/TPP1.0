@@ -1,0 +1,209 @@
+@charset "UTF-8";
+#movieInfo{
+	width:100%;
+	height:387px;
+	background-color:#853834;
+	color:white;
+}
+#mfHead{
+	width:990px;
+	height:51px;
+	margin: 0 auto;
+	border-bottom: 1px solid gray;
+	
+}
+#mfHead span{
+	position: relative;
+	top:15px;
+	font-size: 20px;
+	z-index:1;
+}
+#mfLeft{
+	width:210px;
+	height:280px;
+	float:left;
+	margin-top: 10px;
+	margin-left: 179px;
+}
+
+#mfMid{
+	width:590px;
+	height:280px;
+	float:left;
+	margin-left: 20px;
+	color:white;
+	font-size: 12px;
+}
+#mfRight{
+	width:156px;
+	height:280px;
+	float:left;
+	margin-left: 20px;
+	margin-top: 20px;
+	color:white;
+	font-size: 14px;
+}
+#divSale{
+	width:990px;
+	height:41px;
+	margin:0 auto;
+	margin-top:20px;
+	border-bottom: 1px solid gray;
+}
+#divSale span{
+	font-size: 20px;
+	position: relative;
+	top:5px;
+}
+#midArea{
+	width:990px;
+	height:199px;
+	margin:0 auto;
+	margin-top:20px;
+	font-size: 14px;
+	color:gray;
+}
+#areaLeft{
+	width:90px;
+	height:199px;
+	background-color: #FFDDDC;
+	float: left;
+}
+#areaLeft div{
+	width:100%;
+	height:65px;
+	
+}
+#areaLeft span{
+	display: block;
+	width:60px;
+	height:25px;
+	float:left;
+	position: relative;
+	top:15px;
+	left:15px;
+}
+#areaRight div{
+	width:100%;
+	height:65px;
+	
+}
+#areaRight{
+	width:900px;
+	height:199px;
+	background-color: #FFF6F5;
+	float: left;
+}
+
+
+#area span{
+	display: block;
+	width:60px;
+	height:25px;
+	float:left;
+	margin-left: 12px;
+	margin-right: 12px;
+	position: relative;
+	top:10px;
+	
+}
+#cinema span{
+	display: block;
+	height:25px;
+	float:left;
+	margin-left: 12px;
+	margin-right: 12px;
+	position: relative;
+	top:10px;
+	
+}
+#date span{
+	display: block;
+	height:25px;
+	float:left;
+	margin-left: 12px;
+	margin-right: 12px;
+	position: relative;
+	top:20px;
+	
+}
+#selectCinema{
+	width:990px;
+	height:42px;
+	margin:0 auto;
+	margin-top:10px;
+}
+#selectCinema span{
+	position: relative;
+	top:20px;
+}
+#cinfo{
+	float:right;
+	font-size: 13px;
+	color: red;
+}
+#rifHead{
+	width:990px;
+	height:40px;
+	margin:0 auto;
+}
+.rinfo{
+	width:990px;
+	height:60px;
+	margin:0 auto;
+}
+
+#roundInfo>div:nth-child(odd){
+	background-color: #F6F6F6;
+}
+.d1,.d2{
+	width:138px;
+	height:100%;
+	float: left;
+}
+
+.d3{
+	width:99px;
+	height:100%;
+	float: left;
+}
+.d4{
+	width:178px;
+	height:100%;
+	float: left;
+}
+.d5{
+	width:279px;
+	height:100%;
+	float: left;
+}
+.d6{
+	width:158px;
+	height:100%;
+	float: left;
+}
+#roundInfo span{
+	position: relative;
+	left:25px;
+	top:15px;
+	color:gray;
+	font-size:12px;
+}
+.login,.seatOrder{
+	display:block;
+	font-size:16px;
+	width:90px;
+	height:30px;
+	color:white;
+	background-color: red;
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+#areaRight span:hover {
+	cursor: pointer;
+}
+.login,.seatOrder:hover {
+	cursor: pointer;
+}
+

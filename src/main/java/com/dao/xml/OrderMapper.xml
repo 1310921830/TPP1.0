@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.OrderMapper" >
+<!-- 这个元素可以被用来定义可重用的 SQL 代码段，可以包含在其他语句中-->
+	<sql id="orderColumns">id, seat_info, sum_price, order_numb, identify_code, 
+	is_pay, tel, order_time, user_id, round_id</sql>
+	
+	<select id="getOrderById"  parameterType="java.lang.Long" resultType="Order">
+        select <include refid="orderColumns"></include> 
+        from mvorder where id=#{id}
+    </select>
+    <select id="queryOrderByPay"  parameterType="java.lang.Long" resultType="Order">
+        select <include refid="orderColumns"></include> 
+        from mvorder where id=#{id} and is_pay="是"
+    </select>
+    <insert id="addOrder" parameterType="Order">
+    insert into mvorder values
+    (#{id},#{seatInfo},#{sumPrice},#{orderNumb},#{identifyCode},
+    #{isPay},#{tel},#{orderTime},#{userId},#{roundId}) 
+    </insert>
+    <update id="updateOrderByPay" parameterType="java.lang.Long">
+    	update mvorder set is_pay="是" where id=#{id}
+    </update>
+</mapper>

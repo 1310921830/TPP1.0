@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.CinemaMapper" >
+	<!-- 这个元素可以被用来定义可重用的 SQL 代码段，可以包含在其他语句中-->
+	<sql id="cinemaColumns"> c.id,c.name,c.score,c.tel,c.site,c.site_img,c.area_id </sql>
+	
+	<select id="getCinemasLimit" parameterType="int" resultType="Cinema">
+        select <include refid="cinemaColumns"></include> 
+        from cinema c INNER JOIN area a
+		on c.area_id=a.id and a.city_id=#{city_id} limit 6
+    </select>
+    <select id="getCities" resultType="City">
+    	select id,name from city
+    </select>
+    <select id="getCity" parameterType="int" resultType="City">
+    	select id,name from city where id=#{id}
+    </select>
+    
+    <select id="getAreasByCity" parameterType="int" resultType="Area">
+    	select id,name,city_id from area
+    	where city_id=#{city_id}
+    </select>
+    
+    <select id="getCinemasByCity" parameterType="int" resultType="Cinema">
+     	 select <include refid="cinemaColumns"></include> 
+        from cinema c INNER JOIN area a
+		on c.area_id=a.id and a.city_id=#{city_id}
+    </select>
+    <select id="getCinemaById" parameterType="int" resultType="Cinema">
+     	 select <include refid="cinemaColumns"></include> 
+        from cinema c where c.id=#{id}
+    </select>
+</mapper>

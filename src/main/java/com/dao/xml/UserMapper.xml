@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dao.UserMapper" >
+	<!-- 这个元素可以被用来定义可重用的 SQL 代码段，可以包含在其他语句中-->
+	<sql id="userColumns"> id,nickname,tel,password,name</sql>
+	
+    <select id="getUser" parameterType="map" resultType="User">
+    	select <include refid="userColumns"/>  
+    	from user where tel=#{tel}
+    	and password=#{password}
+    </select>
+    
+    <insert id="saveUser" parameterType="User">
+        insert  into user 
+        values (#{id},#{nickname},#{tel},#{password},#{name})
+    </insert>
+</mapper>
