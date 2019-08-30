@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>淘票票</title>
+<title>我的淘票票</title>
 <script src="<c:url value="/js/jquery-3.1.1.min.js"/>"></script>
 <link rel="stylesheet" href="<c:url value="/css/index.css"/>">
 <script src="<c:url value="/js/index.js"/>"></script>
